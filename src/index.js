@@ -4,11 +4,12 @@ const inputName = document.getElementById('name');
 const inputScore = document.getElementById('score');
 
 const addBtn = document.querySelector('.add_btn');
-const refreshBtn = document.querySelector('.refresh_btn')
+const refreshBtn = document.querySelector('.refresh_btn');
 
 let taskList = [];
 
 addBtn.addEventListener('click', () => {
+  // eslint-disable-next-line eqeqeq
   if (inputName.value.trim() != 0 && inputScore.value.trim() != 0) {
     const localItems = JSON.parse(localStorage.getItem('localItem'));
     if (localItems === null) {
@@ -20,6 +21,7 @@ addBtn.addEventListener('click', () => {
     localStorage.setItem('localItem', JSON.stringify(taskList));
     inputScore.value = '';
     inputName.value = '';
+    // eslint-disable-next-line no-use-before-define
     ClassShowListItems.showItem();
   }
 });
@@ -50,6 +52,5 @@ class ClassShowListItems {
 ClassShowListItems.showItem();
 
 refreshBtn.addEventListener('click', () => {
-    window.location.reload()
-})
-
+  window.location.reload();
+});
