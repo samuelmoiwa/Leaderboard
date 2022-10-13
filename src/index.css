@@ -1,0 +1,75 @@
+h1 {
+  color: rgb(36, 3, 155);
+  font-size: 30px;
+}
+
+.main_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+.names_div {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.refresh {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.refresh_btn {
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.names_list_main_div {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  padding-left: 30px;
+  overflow: scroll;
+}
+
+.input_value_main_div {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.inputs_div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+}
+
+.add_btn_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 300px;
+}
+
+.add_btn {
+  cursor: pointer;
+}
