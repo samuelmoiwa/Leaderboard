@@ -12,30 +12,31 @@
 </head>
 
 <body>
-  <header>
+  <header class="header_div">
     <h1 class="heading">Leaderboard</h1>
   </header>
 
-  <main>
+  <section class="main">
 
-    <section class="space displayScore">
-      <div id="div_1">
-        <h2>Recent Score</h2>
-        <button type="button" class="refresh_btn">Refresh</button>
-      </div>
-      <div id="div_2">
-        <table class="table_item"></table>
-      </div>
-    </section>
+    <div class="display_card"> 
+      <section class="displayScore">
+        <div id="div_1">
+          <h2>Recent Score</h2>
+          <button type="button" class="refresh_btn">Refresh</button>
+        </div>
+        <div id="div_2">
+          <table class="table_item"></table>
+        </div>
+      </section>
 
-    <section class="space inputScore">
-      <h2>Add your score</h2>
-      <input type="text" name="name" placeholder="Your name" class="score_input" id="leaderName" required>
-      <input type="number" name="score" placeholder="Your score" class="score_input" id="leaderScore" required>
-      <p><button type="submit" value="Submit" class="btn-submit">Submit</button></p>
-    </section>
-
-  </main>
+      <section class="inputScore">
+        <h3 class="input_header_text">Add your score</h3>
+        <input type="text" name="name" placeholder="Your name" class="score_input" id="leaderName" required>
+        <input type="number" name="score" placeholder="Your score" class="score_input" id="leaderScore" required>
+        <button type="submit" value="Submit" class="btn-submit">Submit</button>
+      </section>
+    </div>
+  </section>
 
 </body>
 
