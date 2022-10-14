@@ -1,75 +1,128 @@
-h1 {
-  color: rgb(36, 3, 155);
-  font-size: 30px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.main_section {
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  margin-left: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.heading {
+  font-size: 2.5rem;
+  transition: color 3s;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.heading:hover {
+  color: #fde74cff;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
   width: 100%;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 90%;
-  margin-top: 100px;
-  gap: 20px;
+.space {
+  width: 40%;
 }
 
-.names_div {
+.displayScore {
   display: flex;
   flex-direction: column;
-  width: auto;
+  gap: 1.5rem;
+  padding-left: 2rem;
+  margin-top: 70px;
 }
 
-.refresh {
+.displayScore #div_1 {
   display: flex;
-  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
   align-items: center;
-  gap: 30px;
 }
 
-.refresh_btn {
-  width: 60px;
-  height: 30px;
+.displayScore h2,
+.displayScore button {
+  width: max-content;
+}
+
+.refresh_btn,
+.btn-submit {
+  background-color: #fff;
+  border: 4px solid #000;
+  display: inline-block;
   cursor: pointer;
+  color: #0a0a0a;
+  font-weight: bold;
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+  outline: 0;
+  transition: 0.3s linear;
 }
 
-.names_list_main_div {
+.refresh_btn:active,
+.btn-submit:active {
+  transform: scale(0.85);
+}
+
+.table_item {
+  width: 100%;
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+
+.table_item tr:nth-child(even) {
+  background-color: #c2c2c2;
+}
+
+.table_item tr td {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.8rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+}
+
+.table_item tr:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.inputScore {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  height: 500px;
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-  padding-left: 30px;
-  overflow: scroll;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 70px;
 }
 
-.input_value_main_div {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
+.inputScore h2,
+.inputScore input,
+.inputScore p {
+  width: 50%;
 }
 
-.inputs_div {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  gap: 10px;
+.inputScore input {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid #000;
+  color: #000;
 }
 
-.add_btn_div {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  width: 300px;
-}
-
-.add_btn {
-  cursor: pointer;
+.inputScore p {
+  text-align: right;
 }

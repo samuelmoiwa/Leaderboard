@@ -1,56 +1,29 @@
 import './index.css';
+import postData from './modules/post.js';
+import getData from './modules/get.js';
 
-const inputName = document.getElementById('name');
-const inputScore = document.getElementById('score');
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/7TGRfrete546nDR4yurtdeOa1/scores';
 
-const addBtn = document.querySelector('.add_btn');
-const refreshBtn = document.querySelector('.refresh_btn');
+const name = document.querySelector('#leaderName');
+const score = document.querySelector('#leaderScore');
+const refresh = document.querySelector('.refresh_btn');
+const addBTN = document.querySelector('.btn-submit');
 
-let taskList = [];
+addBTN.addEventListener('click', (e) => {
+  e.preventDefault();
 
-addBtn.addEventListener('click', () => {
-  // eslint-disable-next-line eqeqeq
-  if (inputName.value.trim() != 0 && inputScore.value.trim() != 0) {
-    const localItems = JSON.parse(localStorage.getItem('localItem'));
-    if (localItems === null) {
-      taskList = [];
-    } else {
-      taskList = localItems;
-    }
-    taskList.push(`${inputName.value} : ${inputScore.value}`);
-    localStorage.setItem('localItem', JSON.stringify(taskList));
-    inputScore.value = '';
-    inputName.value = '';
-    // eslint-disable-next-line no-use-before-define
-    ClassShowListItems.showItem();
-  }
+  const objLeader = {
+    user: name.value,
+    score: score.value,
+  };
+
+  postData(url, objLeader);
+
+  name.value = '';
+  score.value = '';
 });
 
-class ClassShowListItems {
-  static showItem() {
-    const localItems = JSON.parse(localStorage.getItem('localItem'));
-    if (localItems === null) {
-      taskList = [];
-    } else {
-      taskList = localItems;
-    }
-
-    let html = '';
-    const itemShow = document.querySelector('.scoreLists');
-    taskList.forEach((scoreItemList) => {
-      html += `
-    <div class="scoreListItems">
-      <div class="scoreList">
-        <p class="inputText">${scoreItemList}</p>
-      </div>
-    </div>
-    `;
-    });
-    itemShow.innerHTML = html;
-  }
-}
-ClassShowListItems.showItem();
-
-refreshBtn.addEventListener('click', () => {
-  window.location.reload();
+refresh.addEventListener('click', (e) => {
+  e.preventDefault();
+  getData(url);
 });
