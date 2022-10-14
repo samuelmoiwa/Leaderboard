@@ -1,5 +1,5 @@
 const newLeader = document.querySelector('.table_item');
-const displayLeader = (data) => {
+const display = (data) => {
   while (newLeader.hasChildNodes()) {
     newLeader.removeChild(newLeader.lastChild);
   }
@@ -16,4 +16,4 @@ const displayLeader = (data) => {
   }
 };
 
-export default displayLeader;
+export default display;
