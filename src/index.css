@@ -8,7 +8,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: aquamarine;
 }
 
 .header_div {
@@ -38,7 +37,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: auto;
 }
 
 .display_card {
@@ -49,42 +48,55 @@ body {
   height: 100vh;
   gap: 2rem;
   justify-content: space-between;
-  background-color: greenyellow;
 }
 
 .displayScore {
   display: flex;
   flex-direction: column;
   width: 55%;
+  height: 1000px;
   gap: 1.5rem;
-  padding-left: 1rem;
   margin-top: 70px;
-  background-color: mediumvioletred;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.8));
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.displayScore #div_1 {
+#div_1 {
   display: flex;
-  width: 100%;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(89, 17, 17);
 }
 
-.displayScore h2,
-.displayScore button {
-  width: max-content;
+.recent_scores {
+  color: #fff;
+  margin-left: 1rem;
 }
 
 .refresh_btn {
   background-color: #fff;
-  border: 4px solid #000;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
   display: inline-block;
   cursor: pointer;
-  color: #0a0a0a;
-  font-weight: bold;
+  color:  rgb(89, 17, 17);
+  font-weight: 600;
   padding: 0.5rem 0.8rem;
-  text-decoration: none;
-  outline: 0;
-  transition: 0.3s linear;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.refresh_btn:hover {
+  font-weight: 700;
+  font-size: 1.04rem;
 }
 
 .refresh_btn:active,
@@ -94,8 +106,12 @@ body {
 
 .table_item {
   width: 100%;
-  border: 3px solid black;
+  height: auto;
+  color: rgb(89, 17, 17);
+  max-height: 1000px;
+  border: 3px solid rgb(89, 17, 17);
   border-collapse: collapse;
+  overflow: scroll;
 }
 
 .table_item tr:nth-child(even) {
@@ -110,7 +126,7 @@ body {
 }
 
 .table_item tr:hover {
-  background-color: #000;
+  background-color: rgb(89, 17, 17);
   color: #fff;
 }
 
@@ -121,9 +137,19 @@ body {
   width: 40%;
   height: auto;
   gap: 1rem;
-  padding-left: 1rem;
   margin-top: 70px;
-  background-color: aqua;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.8));
+}
+
+.add_scores_text_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  background-color: rgb(89, 17, 17);
 }
 
 .input_header_text {
@@ -151,20 +177,33 @@ input {
   border-radius: 5px;
   cursor: pointer;
   color: #fff;
+  margin-bottom: 2rem;
   background-color: rgb(89, 17, 17);
+}
+
+.btn-submit:hover {
+  font-family: 700;
+  font-size: 1.1rem;
 }
 
 .inputScore {
   width: 50%;
-}
-
-.inputScore {
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.6);
   font-size: 1.2rem;
-  padding: 0.5rem 0.8rem;
-  border: 2px solid #000;
-  color: #000;
+  border: 2px solid rgb(255, 255, 255);
 }
 
-.inputScore p {
-  text-align: right;
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(89, 17, 17);
+}
+
+.footer_text {
+  color: #fff;
 }
