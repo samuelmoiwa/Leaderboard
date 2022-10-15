@@ -23,6 +23,8 @@ addBTN.addEventListener('click', (e) => {
   score.value = '';
 });
 
+getData(url);
+
 refresh.addEventListener('click', (e) => {
   e.preventDefault();
   getData(url);
