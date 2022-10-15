@@ -2,6 +2,8 @@
 
 # Leader board App
 
+![Screenshot 2022-10-15 084835](https://user-images.githubusercontent.com/38554511/195978061-93113048-0293-4084-94a7-4a8645125420.png)
+
 > Description the project.
 - simple HTML, CSS & JavaScript code, that display user input items.
 - configure with linters 
