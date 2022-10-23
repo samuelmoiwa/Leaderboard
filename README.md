@@ -1,6 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Leader board App
+## [View Live](https://samuelmoiwa.github.io/Leaderboard/)
 
 ![Screenshot 2022-10-15 084835](https://user-images.githubusercontent.com/38554511/195978061-93113048-0293-4084-94a7-4a8645125420.png)
 
